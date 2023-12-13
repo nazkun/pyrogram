@@ -304,7 +304,7 @@ class Session:
                         "Server sent transport error: %s (%s)",
                         error_code, Session.TRANSPORT_ERRORS.get(error_code, "unknown error")
                     )
-                    print("break")
+                    log.warning("-raise auth key 404")
                     await self.stop()
                     raise "auth key 404"
 

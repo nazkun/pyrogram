@@ -304,6 +304,7 @@ class Session:
                         "Server sent transport error: %s (%s)",
                         error_code, Session.TRANSPORT_ERRORS.get(error_code, "unknown error")
                     )
+                    print("break")
                     break
 
                 if self.is_started.is_set():

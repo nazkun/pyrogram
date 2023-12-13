@@ -305,7 +305,8 @@ class Session:
                         error_code, Session.TRANSPORT_ERRORS.get(error_code, "unknown error")
                     )
                     print("break")
-                    await asyncio.sleep(50)
+                    await self.stop()
+                    raise "auth key 404"
 
                     break
 
